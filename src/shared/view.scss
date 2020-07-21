@@ -1,0 +1,9 @@
+$maxMobileSize: 800px;
+$maxTabletSize: 1025px;
+
+//sets the tablet and mobile size
+
+:export {
+    maxTabletSize: 1025;
+    maxMobileSize: 800;
+}
