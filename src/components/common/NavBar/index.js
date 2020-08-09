@@ -4,7 +4,7 @@ import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstr
 const NavBar = () => {
     return (
     <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand href="/">Yu Hao Lee</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
@@ -18,6 +18,7 @@ const NavBar = () => {
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown> */}
+      <Nav.Link href="/contact">Contact</Nav.Link>
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
