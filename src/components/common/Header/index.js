@@ -9,7 +9,7 @@ const Header = () => {
     return (
     <Jumbotron fluid>
         <div id="stars" />
-        <div className = "text-center">
+        <div className = "words text-center">
         <ScrollAnimation animateIn="fadeIn">
             <Container>
                 <h1>Hi, I am Yu Hao!</h1>

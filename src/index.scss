@@ -15,3 +15,12 @@ code {
 .text-center {
   text-align: center;
 }
+
+body {
+  font-size: calc(20px + (26 - 16) * ((120 vw - 1000px) / (1920 - 1000)));
+}
+
+.relative {
+  position: relative;
+}
+
