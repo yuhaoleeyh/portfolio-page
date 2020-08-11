@@ -5,7 +5,7 @@ import c from './img/C++.png';
 import java from './img/java.png';
 import php from './img/php.png';
 import python from './img/python.png';
-import react from './img/react.png';
+import react from './img/react.jpg';
 import git from './img/git.png';
 import css from './img/css.jpg';
 import html from './img/html.png';
@@ -45,7 +45,7 @@ const About = () => {
               </Row>
               <Row className = "break">
                 <Col>
-                  <img src = {react} width = "150" height = "60"/>
+                  <img src = {react} width = "150" height = "80"/>
                 </Col>
                 <Col>
                   <img src = {git} width = "120" height = "40"/>

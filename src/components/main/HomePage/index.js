@@ -32,7 +32,7 @@ const HomePage = () => {
             {/* <Bounce>Home</Bounce>
             <ScrollAnimation animateIn="fadeIn">
 HI</ScrollAnimation> */}
-            <ScrollAnimation delay = {1000} animateIn="fadeIn">
+            <ScrollAnimation animateIn="fadeIn">
                 <About/>
             </ScrollAnimation>
             <Form/>
