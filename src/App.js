@@ -15,16 +15,14 @@ function App() {
     <div>
       <Router>
         {<NavBar/>}
-        <div>YES I AM HERE</div>
+        <div><HomePage/></div>
         <Switch>
-        <div>YES I AM HE2RE</div>
           <Route path = "/" exact component = {HomePage}/>
           <Route path = "/about" exact component = {About}/>
           <Route path = "/achievements" exact component = {Achievements}/>
           <Route path = "/Projects" exact component = {Projects}/>
           <Route path = "/contact" exact component = {Contact}/>
         </Switch>
-        <div>YES I AM HERE3</div>
       </Router>
     </div>
   );
