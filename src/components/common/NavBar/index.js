@@ -9,9 +9,9 @@ const NavBar = () => {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="/#/about">About</Nav.Link>
-      <Nav.Link href="/#/achievements">Achievements</Nav.Link>
-      <Nav.Link href="/#/projects">Projects</Nav.Link>
+      <Nav.Link href="/portfolio_website/#about">About</Nav.Link>
+      <Nav.Link href="/portfolio_website/#achievements">Achievements</Nav.Link>
+      <Nav.Link href="/portfolio_website/#projects">Projects</Nav.Link>
       {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -19,7 +19,7 @@ const NavBar = () => {
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
       </NavDropdown> */}
-      <Nav.Link href="/#/contact">Contact</Nav.Link>
+      <Nav.Link href="/portfolio_website/#contact">Contact</Nav.Link>
     </Nav>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
