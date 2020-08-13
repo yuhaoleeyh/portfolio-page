@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { bounce } from 'react-animations';
 import styled, { css, keyframes } from 'styled-components'
 import Header from '../../common/Header';
-import ScrollAnimation from 'react-animate-on-scroll';
-import About from './about';
-import Form from './form';
+import './css/index.scss'
 
 
 const Bounce = styled.div`animation: 2s ${keyframes `${bounce}`} infinite`;
@@ -32,10 +30,6 @@ const HomePage = () => {
             {/* <Bounce>Home</Bounce>
             <ScrollAnimation animateIn="fadeIn">
 HI</ScrollAnimation> */}
-            <ScrollAnimation animateIn="fadeIn">
-                <About/>
-            </ScrollAnimation>
-            <Form/>
         </div>
     )
 }

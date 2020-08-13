@@ -7,8 +7,8 @@ import Typed from 'react-typed';
 
 const Header = () => {
     return (
-    <Jumbotron fluid>
-        <div id="stars" />
+    <div className = "blue-class full-content">
+        <div id = "stars"></div>
         <div className = "words text-center">
         <ScrollAnimation animateIn="fadeIn">
             <Container>
@@ -29,7 +29,7 @@ const Header = () => {
             </Typed>
         </div>
         {/* <h2 className = {fadeState ? "fade-in-slow" : "fade-out-slow"}>YESSSSSS</h2> */}
-    </Jumbotron>
+    </div>
     )
 }
 
