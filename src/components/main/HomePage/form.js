@@ -12,27 +12,75 @@ const Forms = () => {
       });
     
       const [result, setResult] = useState(null);
-    
-      const sendEmail = event => {
+
+      const handleSubmit = (event) => {
         event.preventDefault();
-        axios
-          .post('/send', { ...state })
-          .then(response => {
-            setResult(response.data);
-            setState({
-              name: '',
-              email: '',
-              title: '',
-              content: ''
+    
+        const {
+          REACT_APP_EMAILJS_RECEIVER: receiverEmail,
+          REACT_APP_EMAILJS_TEMPLATEID: template,
+          REACT_APP_EMAILJS_USERID: user,
+        } = this.props.env;
+    
+        sendFeedback(
+          template,
+          this.sender,
+          receiverEmail,
+          this.state.feedback,
+          user
+        );
+    
+        this.setState({
+          formSubmitted: true
+        });
+      }
+    
+     // Note: this is using default_service, which will map to whatever
+     // default email provider you've set in your EmailJS account.
+      const sendFeedback = (templateId, senderEmail, receiverEmail, feedback, user) => {
+        window.emailjs
+          .send('default_service', templateId, {
+              senderEmail,
+              receiverEmail,
+              feedback
+            },
+            user
+          )
+          .then(res => {
+            this.setState({
+              formEmailSent: true
             });
           })
-          .catch(() => {
-            setResult({
-              success: false,
-              message: 'Something went wrong. Try again later1'
-            });
-          });
-      };
+          // Handle errors here however you like
+          .catch(err => console.error('Failed to send feedback. Error: ', err));
+      }
+    
+      // const sendEmail = event => {
+      //   event.preventDefault();
+      //   axios
+      //     .post('/send', { ...state })
+      //     .then(response => {
+      //       setResult(response.data);
+      //       setState({
+      //         name: '',
+      //         email: '',
+      //         title: '',
+      //         content: ''
+      //       });
+      //       console.log(response);
+      //     })
+      //     .catch(() => {
+      //       setResult({
+      //         success: false,
+      //         message: 'Something went wrong. Try again later1'
+      //       });
+      //     });
+      //     console.log(result);
+      //     console.log(state.name);
+      //     console.log(state.email);
+      //     console.log(state.title);
+      //     console.log(state.content);
+      // };
     
       const onInputChange = event => {
         const { name, value } = event.target;
@@ -55,7 +103,7 @@ const Forms = () => {
             <h2>
                 Reach me via email below!
             </h2>
-            <Form onSubmit={sendEmail}>
+            <Form onSubmit={handleSubmit}>
                 <Form.Row>
                     <Form.Group as={Col} controlId="name">
                     <Form.Label>Name</Form.Label>

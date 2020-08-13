@@ -13,9 +13,9 @@ import Contact from './components/main/Contact';
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename = "portfolio_website">
         {<NavBar/>}
-        <div><HomePage/></div>
+        {/* <div><HomePage/></div> */}
         <Switch>
           <Route path = "/" exact component = {HomePage}/>
           <Route path = "/about" exact component = {About}/>
