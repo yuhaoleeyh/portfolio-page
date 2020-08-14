@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { bounce } from 'react-animations';
 import styled, { css, keyframes } from 'styled-components'
 import Header from '../../common/Header';
+import About from '../About/index';
+import Achievements from '../Achievements/index';
+import Contact from '../Contact/index';
+import Projects from '../Projects/index';
+
 import './css/index.scss'
 
 
@@ -30,6 +35,9 @@ const HomePage = () => {
             {/* <Bounce>Home</Bounce>
             <ScrollAnimation animateIn="fadeIn">
 HI</ScrollAnimation> */}
+            <About/>
+            <Achievements/>
+            <Contact/>
         </div>
     )
 }

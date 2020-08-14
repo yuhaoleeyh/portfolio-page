@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "animate.css": "^4.1.0",
     "axios": "^0.19.2",
+    "dynamic_wordcloud": "^1.0.11",
     "express": "^4.17.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

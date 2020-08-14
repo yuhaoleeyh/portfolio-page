@@ -11,18 +11,18 @@ const Header = () => {
         <div id = "stars"></div>
         <div className = "words text-center">
         <ScrollAnimation animateIn="fadeIn">
-            <Container>
-                <h1>Hi, I am Yu Hao!</h1>
+            <Container >
+                <h1>HI, I'M YU HAO</h1>
                 <p>A Singapore Management University Year 1 Computer Science Student </p>
 
             </Container>
         </ScrollAnimation>
             <Typed
                 strings={[
-                    'I am a software engineer',
-                    'I am a back-end developer',
-                    'I am a front-end developer',
-                    'I am a competitive programmer']}
+                    'Software Engineer',
+                    'Back-End Developer',
+                    'Front-End Developer',
+                    'Competitive Programmer']}
                     typeSpeed={60}
                     backSpeed={30}
                     loop >

@@ -8,20 +8,19 @@ const About = () => {
     return (
         <ScrollAnimation animateIn="fadeIn">
         <div>
-        <div className = "text-center">
-            <h4> C++ | Java | React JS | Python | PHP | HTML/CSS | Bootstrap | Git </h4>
+        <div className = "text-center break">
+            <h4> About Me </h4>
         </div>
-        <div className = "about">
+        <div className = "about text-center">
         <Card>
-        <Card.Header>About Me</Card.Header>
         <Card.Body>
           {/* <Card.Title>Special title treatment</Card.Title> */}
           <Card.Text>
             <p>
-             As a self-taught developer, I believe in lifelong learning and always strive for continuous improvement. I strive to make an impact on whatever I do, touch the hearts of whoever I meet and make a difference with the knowledge I have. 
+             Hi! My name is Yu Hao. As a self-taught developer, I believe in lifelong learning and always strive for continuous improvement. I am passionate in Software Development, DevOps, CyberSecurity and developing awesome UIs. Open to learning new and emerging technologies, I strive to make an impact on whatever I do, touch the hearts of whoever I meet and make a difference with the knowledge I have. 
             </p>
             <p>
-              Passionate in software development, DevOps, CyberSecurity and developing awesome UIs. Open to learning new and emerging technologies. 
+              In my free time, I enjoy listening to music, spending time with family and friends and cooking. 
             </p>
           </Card.Text>
         </Card.Body>

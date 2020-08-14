@@ -9,11 +9,10 @@ import Achievements from './components/main/Achievements';
 import Projects from './components/main/Projects';
 import Contact from './components/main/Contact';
 
-
 function App() {
   return (
     <div>
-      <Router basename = "/">
+      <Router basename = "/portfolio_website">
         {<NavBar/>}
         {/* <div><HomePage/></div> */}
         <Switch>
