@@ -13,20 +13,22 @@ const Header = () => {
         <ScrollAnimation animateIn="fadeIn">
             <Container >
                 <h1>HI, I'M YU HAO</h1>
-                <p>A Singapore Management University Year 1 Computer Science Student </p>
+                <p1>A Singapore Management University Year 1 Computer Science Student </p1>
 
             </Container>
         </ScrollAnimation>
+            <h2>
             <Typed
                 strings={[
-                    'Software Engineer',
-                    'Back-End Developer',
-                    'Front-End Developer',
-                    'Competitive Programmer']}
+                    'I am a Software Engineer',
+                    'I am a Back-End Developer',
+                    'I am a Front-End Developer',
+                    'I am a Competitive Programmer']}
                     typeSpeed={60}
                     backSpeed={30}
                     loop >
             </Typed>
+            </h2>
         </div>
         {/* <h2 className = {fadeState ? "fade-in-slow" : "fade-out-slow"}>YESSSSSS</h2> */}
     </div>

@@ -1,3 +1,4 @@
+@import '../../../../shared/view.scss';
 
 .fade-in-slow {
   overflow: hidden;
@@ -24,27 +25,33 @@
     to { width: 0; } 
   } 
 
-  .background {
-    overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    height: 100vh;
-}
-
 .full-content {
-  height: 30em;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  overflow: hidden;
 }
 
 .words {
-  padding-top: 6.0em;
-  height: 100%;
-  color: white;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 5em;
+
+}
+
+@media (max-width: $maxTabletSize) { 
+  .words {
+    line-height: 2em;
+    font-size: 1.5em;
+  }
 }
 
 
 .header-class {
-  background: #7F7FD5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: black;
+  // background: #7F7FD5;  /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @keyframes animStar {
@@ -55,7 +62,7 @@
 @function multiple-box-shadow ($n) {
   $value: '#{random(3000)}px #{random(2395)}px #FFF';
   @for $i from 2 through $n {
-    $value: '#{$value} , #{random(3000)}px #{random(500)}px #FFF';
+    $value: '#{$value} , #{random(3000)}px #{random(1000)}px #FFF';
   }
   @return unquote($value);
 }
