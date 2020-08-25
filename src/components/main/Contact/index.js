@@ -1,136 +1,62 @@
-import React, { useState } from 'react';
-import { Form, Button, Col, Jumbotron, Image } from 'react-bootstrap';
+import React from 'react';
 import './css/form.scss';
-import axios from 'axios';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Button, Col, Row, Container, Image } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faHandsHelping } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
-    const [state, setState] = useState({
-        name: '',
-        email: '',
-        title: '',
-        content: ''
-      });
-    
-      const [result, setResult] = useState(null);
-
-      const handleSubmit = (event) => {
-        event.preventDefault();
-    
-        const {
-          REACT_APP_EMAILJS_RECEIVER: receiverEmail,
-          REACT_APP_EMAILJS_TEMPLATEID: template,
-          REACT_APP_EMAILJS_USERID: user,
-        } = process.env;
-    
-        sendFeedback(
-          template,
-          this.sender,
-          receiverEmail,
-          this.state.feedback,
-          user
-        );
-    
-        this.setState({
-          formSubmitted: true
-        });
-      }
-    
-     // Note: this is using default_service, which will map to whatever
-     // default email provider you've set in your EmailJS account.
-      const sendFeedback = (templateId, senderEmail, receiverEmail, feedback, user) => {
-        window.emailjs
-          .send('default_service', templateId, {
-              senderEmail,
-              receiverEmail,
-              feedback
-            },
-            user
-          )
-          .then(res => {
-            this.setState({
-              formEmailSent: true
-            });
-          })
-          // Handle errors here however you like
-          .catch(err => console.error('Failed to send feedback. Error: ', err));
-      }
-    
-      // const sendEmail = event => {
-      //   event.preventDefault();
-      //   axios
-      //     .post('/send', { ...state })
-      //     .then(response => {
-      //       setResult(response.data);
-      //       setState({
-      //         name: '',
-      //         email: '',
-      //         title: '',
-      //         content: ''
-      //       });
-      //       console.log(response);
-      //     })
-      //     .catch(() => {
-      //       setResult({
-      //         success: false,
-      //         message: 'Something went wrong. Try again later1'
-      //       });
-      //     });
-      //     console.log(result);
-      //     console.log(state.name);
-      //     console.log(state.email);
-      //     console.log(state.title);
-      //     console.log(state.content);
-      // };
-    
-      const onInputChange = event => {
-        const { name, value } = event.target;
-    
-        setState({
-          ...state,
-          [name]: value
-        });
-      };
-    
     return (
-        <div className = "blue-class">
-        <div className = "form-fill">
-        {result && (
-            <p className={`${result.success ? 'success' : 'error'}`}>
-            {result.message}
-            </p>
-            )}
-            <h2>
-                Reach me via email below!
-            </h2>
-            <Form onSubmit={handleSubmit}>
-                <Form.Row>
-                    <Form.Group as={Col} controlId="name">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" name = "name" value = {state.name} placeholder="Name" onChange = {onInputChange}/>
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="email">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="text" name = "email" value = {state.email} placeholder="Email" onChange = {onInputChange} />
-                    </Form.Group>
-                </Form.Row>
-
-                <Form.Group controlId="title">
-                    <Form.Label>Title</Form.Label>
-                    <Form.Control type = "text" name = "title" value = {state.title} placeholder="Title" onChange = {onInputChange}/>
-                </Form.Group>
-
-                <Form.Group controlId="content">
-                    <Form.Label>Content</Form.Label>
-                    <Form.Control as="textarea" rows="5" type = "text" name = "content" value = {state.content} placeholder="Type your message here.." onChange = {onInputChange}/>
-                </Form.Group>
-
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
-            </div>
+      <div>
+        <div className = "text-center break">
+            <h3> 
+              LET'S GET IN TOUCH
+            </h3>
         </div>
+        <div className = "text-center">
+        
+          <Container className = "bottom-break word">
+            <Row>
+              <Col md = {{ span: 10, offset: 1 }}>
+          <p>
+            <p3>
+              I am always open to new opportunities for collaboration, and would love to have a chat with you! 
+            </p3>
+          </p>
+          <Button onClick="location.href = 'https://drive.google.com/file/d/1ldWlI_B0VzM1AyD58E_hhiAyxsTghJMG/view?usp=sharing';">CONTACT ME</Button>
+            
+            </Col>
+            </Row>
+          </Container>
+        </div>
+      <div className = "footer text-center">
+        <Container>
+          <Row>
+            <Col>
+            HIIIII
+            <ul class="list-inline social-buttons animated fadeIn">
+                            {/* <!-- Facebook Button --> */}
+                            <li><a id="facebook" href="https://www.facebook.com/brittany.chiang"><i class="fa fa-facebook"></i></a></li>
+                            {/* <!-- Twitter Button --> */}
+                            <li><a id="twitter" href="https://twitter.com/bchiang7"><i class="fa fa-twitter"></i></a></li>
+                            {/* <!-- Instagram Button --> */}
+                            <li><a id="instagram" href="https://instagram.com/bchiang7/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            {/* <!-- Pinterest Button --> */}
+                           <li><a id="pinterest" href="https://www.pinterest.com/brittanychiang/" target="_blank"><i class="fa fa-pinterest"></i></a></li> 
+                            {/* <!-- Spotify Button --> */}
+                            <li><a id="spotify" href="https://play.spotify.com/user/bchiang7" target="_blank"><i class="fa fa-spotify"></i></a></li>
+                            {/* <!-- Codepen Button --> */}
+                            <li><a id="codepen" href="http://codepen.io/bchiang7/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+                            {/* <!-- GitHub Button --> */}
+                            <li><a id="github" href="https://github.com/bchiang7" target="_blank"><i class="fa fa-github"></i></a></li>
+                            {/* <!-- LinkedIn Button --> */}
+                            <li><a id="linkedin" href="https://www.linkedin.com/in/bchiang7" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
     )
 }
 

@@ -8,24 +8,6 @@ import ReactTable from 'react-table-6';
 
 
 const Achievements = () => {
-    const data = [{
-        event: '3* Competitive Programmer on CodeChef',
-        position: "Peak rating of 1708",
-      },{
-        event: 'Tanner Linsley',
-        position: 26,
-      }]
-     
-      const columns = [{
-        Header: 'Event',
-        accessor: 'event' 
-      }, {
-        Header: 'Position',
-        accessor: 'position',
-        
-      }]
-
-
     return (
         <div>
             <div className = "resume">
@@ -84,10 +66,20 @@ const Achievements = () => {
             <div className = "grey-colour">
                 <div className = "text-center">
                     <h3 className = "resume-break">MY ACHIEVEMENTS</h3>
+                    <Container className = "bottom-break word">
+                    <Row>
+                        <Col md = {{ span: 10, offset: 1 }}>
+
                     <hr/>
                     <div className = "bottom-break">
                         <div>
+                            2nd runner-up for Pythonic Heicoders Academy Contest 2020
+                        </div>
+                        <div>
                             3* Competitive Programmer in CodeChef (Peak rating of 1708)
+                        </div>
+                        <div>
+                            SMU Global Impact Scholar (2020 - 2024)
                         </div>
                         <div>
                             ACT Score of 34 (Top 1% of all test-takers, Dec 2017)
@@ -130,6 +122,9 @@ const Achievements = () => {
                             Certificate of Merit for SMU Lets Code Program 2016
                         </div>
                     </div>
+                    </Col>
+                    </Row>
+                    </Container>
                 </div>
             </div>
         </div>
