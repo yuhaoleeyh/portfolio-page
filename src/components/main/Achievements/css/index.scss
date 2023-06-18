@@ -1,19 +1,5 @@
-.resume {
-    background-image: url(../img/laptop.jpg);
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 50vh;
-    display: table;
-    overflow: hidden;
-}
+@import '../../../../shared/view.scss';
 
-.resume-break {
-    padding-top: 3.0em;
-}
   
 .words {
     display: table-cell;
@@ -39,10 +25,25 @@
     font-family: Arial
 }
 
+@media (max-width: $maxTabletSize) {
+
+    .logo {
+        margin: 10px;
+    }
+}
+
+// .logo {
+//     margin: 10px;
+// }
+
 .bottom-break {
     padding-bottom: 3.0em;
 }
 
 .tables {
     margin: 0 2.0em;
+}
+
+.blue {
+    color: blue
 }

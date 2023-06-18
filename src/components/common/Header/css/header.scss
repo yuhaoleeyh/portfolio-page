@@ -1,5 +1,48 @@
 @import '../../../../shared/view.scss';
 
+// .header:before {
+//   content: "";
+//   background-color: #b0102d;
+//   clip-path: ellipse(300px 450px at 1000px)
+// }
+
+// .header-outer {
+//   clip-path: polygon(0 50%, 34% 100%, 190% 0, 0 0);
+//   // display: inline-block;
+//   position: relative;
+// }
+
+.header {
+  // clip-path: polygon(0 90%, 50% 56%, 150% 0%, 0 0);
+  // clip-path: polygon(0 50%, 34% 100%, 190% 0, 0 0);
+  // clip-path: (20% 100%, 50% 70%, 80% 100%);
+  // background-color: #12232E;
+  color: white;
+  // border-radius: 3em;
+  // botto
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+
+}
+
+@media (max-width: $maxTabletSize) {
+  .big-font {
+    font-size: 3rem;
+  }
+  
+  .small-font {
+    font-size: 1rem;
+  }
+  
+}
+
+.big-font {
+  font-size: 4rem;
+}
+
+.small-font {
+  font-size: 2rem;
+}
+
 .fade-in-slow {
   overflow: hidden;
   width: 30em;
@@ -10,15 +53,15 @@
 
 @keyframes in{ 
     from { width: 0; } 
-  } 
+} 
 
-  .fade-out-slow {
-      overflow: hidden;
-      width: 4.5em;
-      animation: out 4s steps(8, end);
-     background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    height: 100vh;
-  }
+.fade-out-slow {
+  overflow: hidden;
+  width: 4.5em;
+  animation: out 4s steps(8, end);
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  height: 100vh;
+}
 
   @keyframes out{ 
     from { width: 4.5; }
@@ -26,10 +69,24 @@
   } 
 
 .full-content {
-  width: 100%;
+  // width: 100%;
+  // height: 100vh;
+  // display: table;
+  // overflow: hidden;
+
   height: 100vh;
+  width: 100%;
   display: table;
   overflow: hidden;
+}
+
+@media (max-width: $maxTabletSize) { 
+  .full-content { 
+    height: 100vh;
+    width: 100%;
+    display: table;
+    overflow: hidden;
+  }
 }
 
 .words {
@@ -49,9 +106,6 @@
 
 .header-class {
   background: black;
-  // background: #7F7FD5;  /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-  // background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @keyframes animStar {
@@ -72,6 +126,6 @@
   width: 1.5px;
   height: 1.5px;
   background: transparent;
-  box-shadow: multiple-box-shadow(500);
+  box-shadow: multiple-box-shadow(1500);
   animation: animStar 30s linear infinite;
 }
