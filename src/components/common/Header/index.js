@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card, Button, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import ScrollAnimation from 'react-animate-on-scroll';
 import './css/header.scss';
 import Typed from 'react-typed';

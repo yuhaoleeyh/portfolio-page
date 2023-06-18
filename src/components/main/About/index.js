@@ -1,6 +1,5 @@
 import React from 'react';
 import './css/about.scss';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { Col, Row, Container, Image } from 'react-bootstrap';
 import profile from './img/image.jpeg'
 

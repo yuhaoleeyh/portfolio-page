@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Row, Container, Image } from "react-bootstrap";
+import {Col, Row, Container, Image } from "react-bootstrap";
 import "./css/index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
