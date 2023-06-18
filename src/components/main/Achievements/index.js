@@ -89,7 +89,7 @@ const Achievements = () => {
             </ScrollAnimation>
           </Col>
         </Row>
-        <Row className="resume-break">
+        <Row className="resume-break text-center">
           <Col xs={12} md={6}>
             <ScrollAnimation animateIn="fadeIn" animateOnce={true} delay = {600}>
               <div className="circle text-center">
@@ -122,7 +122,7 @@ const Achievements = () => {
             </ScrollAnimation>
           </Col>
         </Row>
-        <Row>
+        <Row className = "text-center">
         <Col xs={12} md={6}>
             <ScrollAnimation animateIn="fadeIn" delay={600} animateOnce={true}>
               <div className="circle text-center">
